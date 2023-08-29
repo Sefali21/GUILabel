@@ -1,0 +1,88 @@
+package flowLayout;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class FlowLayOut extends JFrame {
+    private JFrame frame;
+    private JButton button1;
+    private JButton button2;
+    private JButton button3;
+    private JButton button4;
+    private JButton button5;
+    private JButton button6;
+    private JButton button7;
+    private JButton button8;
+    private JButton button9;
+    private JPanel panel1;
+
+
+    public FlowLayOut() {
+        this.setButtons();
+        this.setPanel();
+        this.setFrame();
+    }
+
+    private void setFrame() {
+        this.frame = new JFrame();
+        this.frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        this.frame.setSize(500, 500);
+        this.frame.setLayout(new FlowLayout());
+
+//        this.frame.add(this.button1);
+//        this.frame.add(this.button2);
+//        this.frame.add(this.button3);
+//        this.frame.add(this.button4);
+//        this.frame.add(this.button5);
+//        this.frame.add(this.button6);
+//        this.frame.add(this.button7);
+//        this.frame.add(this.button8);
+//        this.frame.add(this.button9);
+
+        this.frame.add(this.panel1);
+
+        this.frame.setVisible(true);
+    }
+
+    private void setButtons(){
+        this.button1=new JButton("1");
+        this.button1.addActionListener( e-> System.out.println("1"));
+        this.button2=new JButton("2");
+        this.button2.addActionListener( e-> System.out.println("2"));
+        this.button3=new JButton("3");
+        this.button3.addActionListener( e-> System.out.println("3"));
+        this.button4=new JButton("4");
+        this.button4.addActionListener( e-> System.out.println("4"));
+        this.button5=new JButton("5");
+        this.button5.addActionListener( e-> System.out.println("5"));
+        this.button6=new JButton("6");
+        this.button6.addActionListener( e-> System.out.println("6"));
+        this.button7=new JButton("7");
+        this.button7.addActionListener( e-> System.out.println("7"));
+        this.button8=new JButton("8");
+        this.button8.addActionListener( e-> System.out.println("8"));
+        this.button9=new JButton("9");
+        this.button9.addActionListener( e-> System.out.println("9"));
+    }
+
+    private void setPanel(){
+        this.panel1=new JPanel();
+        this.panel1.setPreferredSize(new Dimension(250,250));
+        this.panel1.setBackground(Color.cyan);
+        this.panel1.setLayout(new FlowLayout());
+
+        this.panel1.add(this.button1);
+        this.panel1.add(this.button2);
+        this.panel1.add(this.button3);
+        this.panel1.add(this.button4);
+        this.panel1.add(this.button5);
+        this.panel1.add(this.button6);
+        this.panel1.add(this.button7);
+        this.panel1.add(this.button8);
+        this.panel1.add(this.button9);
+    }
+
+
+}
