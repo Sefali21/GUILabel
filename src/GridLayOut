@@ -1,0 +1,66 @@
+package gridLayOut;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class GridLayOut extends JFrame {
+    private JFrame frame;
+    private JButton button1;
+    private JButton button2;
+    private JButton button3;
+    private JButton button4;
+    private JButton button5;
+    private JButton button6;
+    private JButton button7;
+    private JButton button8;
+    private JButton button9;
+
+    public GridLayOut(){
+        this.setButtons();
+        this.setFrame();
+    }
+
+    private void setFrame(){
+        this.frame=new JFrame();
+        this.frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        this.frame.setSize(500,500);
+        this.frame.setLayout(new GridLayout(3,3, 1, 1));
+
+        this.frame.add(button1);
+        this.frame.add(button2);
+        this.frame.add(button3);
+        this.frame.add(button4);
+        this.frame.add(button5);
+        this.frame.add(button6);
+        this.frame.add(button7);
+        this.frame.add(button8);
+        this.frame.add(button9);
+
+        this.frame.setVisible(true);
+    }
+
+    private void setButtons(){
+        this.button1=new JButton("1");
+        this.button1.addActionListener( e-> System.out.print("1"));
+        this.button2=new JButton("2");
+        this.button2.addActionListener( e-> System.out.print("2"));
+        this.button3=new JButton("3");
+        this.button3.addActionListener( e-> System.out.print("3"));
+        this.button4=new JButton("4");
+        this.button4.addActionListener( e-> System.out.print("4"));
+        this.button5=new JButton("5");
+        this.button5.addActionListener( e-> System.out.print("5"));
+        this.button6=new JButton("6");
+        this.button6.addActionListener( e-> System.out.print("6"));
+        this.button7=new JButton("7");
+        this.button7.addActionListener( e-> System.out.print("7"));
+        this.button8=new JButton("8");
+        this.button8.addActionListener( e-> System.out.print("8"));
+        this.button9=new JButton("9");
+        this.button9.addActionListener( e-> System.out.print("9"));
+    }
+
+
+}
