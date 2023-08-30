@@ -1,0 +1,27 @@
+package joptionPaneDialogBox;
+
+import javax.swing.*;
+
+public class Main {
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(JOptionPane_DialogBox::new);
+        JOptionPane.showMessageDialog(null, "<html>This is some useless info<br>PLAIN_MESSAGE</html>", "PLAIN", JOptionPane.PLAIN_MESSAGE);
+        JOptionPane.showMessageDialog(null, "<html>This is some useless info<br>JOptionPane.INFORMATION_MESSAGE</html>", "Info", JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showMessageDialog(null, "<html>This is some useless info<br>JOptionPane.QUESTION_MESSAGE</html>", "Question ???", JOptionPane.QUESTION_MESSAGE);
+        JOptionPane.showMessageDialog(null, "<html>This is some useless info<br>JOptionPane.WARNING_MESSAGE</html>", "Warning Warning Warning", JOptionPane.WARNING_MESSAGE);
+        JOptionPane.showMessageDialog(null, "<html>This is some useless info<br>JOptionPane.ERROR_MESSAGE</html>", "Error", JOptionPane.ERROR_MESSAGE);
+
+        JOptionPane.showConfirmDialog(null, "<html>Do you even code<br>JOptionPane.YES_NO_CANCEL_OPTION</html>", "Confirm", JOptionPane.YES_NO_CANCEL_OPTION);
+
+        int answer=JOptionPane.showConfirmDialog(null, "<html>Do you even code<br>JOptionPane.YES_NO_CANCEL_OPTION</html>", "Confirm", JOptionPane.YES_NO_CANCEL_OPTION);
+
+        String name=JOptionPane.showInputDialog("What is your name");
+        System.out.println(name);
+
+        String[] options={"you are the best bro", "Thnx", "You are wellcome"};
+        JOptionPane.showInternalOptionDialog(null, "Yor are awesome", "secret msg",
+                JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE, null, options, 0);
+
+
+    }
+}
